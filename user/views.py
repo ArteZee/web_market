@@ -3,6 +3,11 @@ from django.shortcuts import render
 
 
 def user_profile(request: HttpRequest, ) -> HttpResponse:
+    """
+    function return data of user to html
+    :param request:
+    :return:
+    """
     user_data = {
         "user_nick": "ArteZee",
         "user_first_name": "Artem",

@@ -1,22 +1,24 @@
+{#Html home page / catalog of products#}
 {% extends "base.html" %}
 {% block title %}Homepage{% endblock %}
 {% block container %}
-<link rel="import" href="/products/views.py">
+
 
     <h1>Catalog</h1>
     <hr color="black">
     <style>
+        {# frame of images that give equal space between them #}
         .passe-partout {
-            padding: 10px; /* Размер паспарту */
-            background: #f0f0f0; /* Цвет фона паспарту */
-            border: 2px solid black; /* Параметры рамки */
-            display: inline-block; /* Строчно-блочный элемент */
-            margin: 1em; /* Убираем отступы */
+            padding: 10px; /* Passe-partout size */
+            background: #f0f0f0; /* Passe-partout background color */
+            border: 2px solid black; /* Frame Options */
+            display: inline-block; /* Inline-block element*/
+            margin: 1em; /* remove space */
         }
 
         .passe-partout img {
             border: 3px;
-            /* Рамка вокруг изображения */
+            /* frame around img */
         }
 
         .b_color {
@@ -28,20 +30,22 @@
     </style>
 
 
+    {#get frame #}
+    <figure class="passe-partout">
+        <img src="https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg" width="200" height="231" alt="Wall E"
+             class="passe-partout">
+        <h1>Robot: Wall E </h1>
+        <div><span style="font-size:35px;color: crimson">Price:</span> <span
+                style="font-size: 30px; "> 50_000.00 </span>
+        </div>
+        <form action="/wall-e">
+            <p>
+                <button class="b_color">More</button>
+            </p>
+        </form>
+    </figure>
 
-  <figure class="passe-partout">
-    <img src="https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg" width="200" height="231" alt="Wall E" class="passe-partout">
-      <h1>Robot: Wall E </h1>
-      <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; "> 50_000.00 </span>
-      </div>
-      <form action="/wall-e">
-          <p>
-              <button class="b_color">More</button>
-          </p>
-      </form>
-  </figure>
-
-
+    {#get frame #}
     <figure class="passe-partout">
         <img src="https://www.pngmart.com/files/12/R2-D2-PNG-HD.png" width="200" height="231" alt="R2D2"
              class="passe-partout">
@@ -54,7 +58,7 @@
             </p>
         </form>
     </figure>
-
+    {#get frame #}
     <figure class="passe-partout">
         <img src="https://img.artpal.com/29308/8-16-11-14-3-37-18m.jpg" width="200" height="231" alt="C3PO"
              class="passe-partout">
@@ -66,7 +70,7 @@
                 <button class="b_color">More</button>
         </form>
     </figure>
-
+    {#get frame #}
     <figure class="passe-partout">
         <img src="https://gagadget.com/media/files/u2/2010/07/Bender.jpg" width="200" height="231" alt="bender"
              class="passe-partout">

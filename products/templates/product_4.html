@@ -1,32 +1,39 @@
+{#html of bender #}
 {% extends "base.html" %}
 {% block title %}Homepage{% endblock %}
 {% block container %}
-<style>
-.b_color{
-    background: navy;
-    color: antiquewhite;
-    width:200px;
-    height:25px;
+    <style>
+        .b_color {
+            background: navy;
+            color: antiquewhite;
+            width: 200px;
+            height: 25px;
 
-}
-</style>
+        }
+    </style>
 
-<img src="https://gagadget.com/media/files/u2/2010/07/Bender.jpg" width="300" height="300"
-alt="picture">
+    <img src="https://gagadget.com/media/files/u2/2010/07/Bender.jpg" width="300" height="300"
+         alt="picture">
     <hr>
-<h1>Robot: {{ product }} </h1>
+    <h1>Robot: {{ product }} </h1>
 
-<div><span style="font-size:35px;color: black">Description: </span> <span style="font-size: 30px; ">{{ description }}</span></div>
-<div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; ">{{ price }}</span></div>
+    <div><span style="font-size:35px;color: black">Description: </span> <span
+            style="font-size: 30px; ">{{ description }}</span></div>
+    <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; ">{{ price }}</span>
+    </div>
 
-{% if  available  %}
-  <form action="/cart">
-    <div><span style="font-size:35px;color: black">Available:</span><span style="font-size: 30px; ">in available</span></div>
-    <p><button class="b_color" >Buy</button>
-  </form>
-{% else %}
-   <div><span style="font-size:35px;color: gray">Available:</span><span style="font-size: 30px; ">None</span></div>
-   <p><button disabled>Buy</button></p>
-{% endif %}
+    {% if  available %}
+        <form action="/cart">
+            <div><span style="font-size:35px;color: black">Available:</span><span
+                    style="font-size: 30px; ">in available</span></div>
+            <p>
+                <button class="b_color">Buy</button>
+        </form>
+    {% else %}
+        <div><span style="font-size:35px;color: gray">Available:</span><span style="font-size: 30px; ">None</span></div>
+        <p>
+            <button disabled>Buy</button>
+        </p>
+    {% endif %}
 
 {% endblock %}
