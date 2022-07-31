@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block container %}
+<link rel="import" href="/products/views.py">
 
-</body>
-</html>
+    <h1>Catalog</h1>
+    <hr color="black">
+    <style>
+        .passe-partout {
+            padding: 10px; /* Размер паспарту */
+            background: #f0f0f0; /* Цвет фона паспарту */
+            border: 2px solid black; /* Параметры рамки */
+            display: inline-block; /* Строчно-блочный элемент */
+            margin: 1em; /* Убираем отступы */
+        }
+
+        .passe-partout img {
+            border: 3px;
+            /* Рамка вокруг изображения */
+        }
+
+        .b_color {
+            background: navy;
+            color: antiquewhite;
+            width: 200px;
+            height: 25px;
+        }
+    </style>
+
+
+
+  <figure class="passe-partout">
+    <img src="https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg" width="200" height="231" alt="Wall E" class="passe-partout">
+      <h1>Robot: Wall E </h1>
+      <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; "> 50_000.00 </span>
+      </div>
+      <form action="/wall-e">
+          <p>
+              <button class="b_color">More</button>
+          </p>
+      </form>
+  </figure>
+
+
+    <figure class="passe-partout">
+        <img src="https://www.pngmart.com/files/12/R2-D2-PNG-HD.png" width="200" height="231" alt="R2D2"
+             class="passe-partout">
+        <h1>Robot: R2D2 </h1>
+        <div><span style="font-size:35px;color: crimson">Price:</span> <span
+                style="font-size: 30px; "> 75_999.99 </span></div>
+        <form action="/r2d2">
+            <p>
+                <button class="b_color">More</button>
+            </p>
+        </form>
+    </figure>
+
+    <figure class="passe-partout">
+        <img src="https://img.artpal.com/29308/8-16-11-14-3-37-18m.jpg" width="200" height="231" alt="C3PO"
+             class="passe-partout">
+        <h1>Robot: C3PO </h1>
+        <div><span style="font-size:35px;color: crimson">Price:</span> <span
+                style="font-size: 30px; "> 100_000.99 </span></div>
+        <form action="/c3po">
+            <p>
+                <button class="b_color">More</button>
+        </form>
+    </figure>
+
+    <figure class="passe-partout">
+        <img src="https://gagadget.com/media/files/u2/2010/07/Bender.jpg" width="200" height="231" alt="bender"
+             class="passe-partout">
+        <h1>Robot: Bender </h1>
+        <div><span style="font-size:35px;color: crimson">Price:</span> <span
+                style="font-size: 30px; "> 99_999.00 </span></div>
+        <form action="/bender">
+            <p>
+                <button class="b_color">More</button>
+        </form>
+    </figure>
+
+{% endblock %}
