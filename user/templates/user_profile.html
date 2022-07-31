@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block container %}
 
-</body>
-</html>
+
+<h1>User profile:{{ user_nick }} </h1>
+<hr>
+
+<img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" width="200" height="200"
+alt="picture">
+
+
+<div><span style="font-size:35px;color: gray">Nickname:</span> <span style="font-size: 30px; ">{{ user_nick }}</span></div>
+<div><span style="font-size:35px;color: gray">First name:</span> <span style="font-size: 30px; ">{{ user_first_name }}</span></div>
+<div><span style="font-size:35px;color: gray">Last name:</span> <span style="font-size: 30px; ">{{ user_last_name }}</span></div>
+<div><span style="font-size:35px;color: gray">Height:</span> <span style="font-size: 30px; ">{{ user_height }}</span></div>
+<div><span style="font-size:35px;color: gray">Age:</span> <span style="font-size: 30px; ">{{ user_age }}</span></div>
+<div><span style="font-size:35px;color: gray ">Education:</span> <span style="font-size: 30px; ">{{ user_education }}</span></div>
+
+{% endblock %}

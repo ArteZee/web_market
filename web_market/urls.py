@@ -22,7 +22,6 @@ urlpatterns = [
     path("", views.homepage),
     path("cart", views.about),
     path("", include("products.urls")),
-
-
+    path("", include("user.urls")),
 
 ]
