@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 
+
 product_data = [{
     "id": 1,
     "product": "Wall E",
@@ -11,8 +12,10 @@ product_data = [{
                    "incredible events through which he will meet friends, rise to the stars and even be able to change to "
                    "to the best of their former owners, who completely forgot their native Earth",
     "price": 50_000.00,
+    "img": "https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg"
 },
     {
+
         "id": 2,
         "product": "R2D2",
         "slug": "r2d2",
@@ -23,7 +26,8 @@ product_data = [{
                        "sequences of bleeps, whistles, and trills that C-3PO can translate. It appears that "
                        "his masters also understand what he wants to say. Also, when connected to a fighter, R2-D2 can"
                        "communicate with the pilot by typing your lines on the monitor.",
-        "price": 75_999.99
+        "price": 75_999.99,
+        "img": "https://www.pngmart.com/files/12/R2-D2-PNG-HD.png"
     },
     {
         "id": 3,
@@ -33,7 +37,8 @@ product_data = [{
         "description": "The constant companion of R2D2 is the protocol robot C3PO, who is known to speak two million languages,"
                        "including the language of the R2D2 robot. Looks stupid and sometimes cowardly, which does not prevent him from arousing sympathy."
                        "Albeit smaller than his vacuum cleaner partner.",
-        "price": 100_000.99
+        "price": 100_000.99,
+        "img": "https://free-png.ru/wp-content/uploads/2022/01/free-png.ru-427.png",
     },
     {
         "id": 4,
@@ -43,41 +48,13 @@ product_data = [{
         "description": "Rough and alcoholic, lover of cigars and foul language, Bender is, however, sympathy."
                        "Maybe the whole point is that he always remains himself, says what he thinks"
                        "(except for those frequent times when he lies) and does not try to be someone else",
-        "price": 99_999.00
+        "price": 99_999.00,
+        "img": "https://gagadget.com/media/files/u2/2010/07/Bender.jpg"
     }]
 
 
-def product_1(request: HttpRequest, ) -> HttpResponse:
-    """
-    funcion return render information of wall-e
-    :param request:
-    :return:
-    """
-    return render(request, "product_1.html", product_data[0])
+def product(request: HttpRequest, product_name):
+    for el in product_data:
+        if el["slug"] == product_name:
+            return render(request, "product.html", el)
 
-
-def product_2(request: HttpRequest, ) -> HttpResponse:
-    """
-       funcion return render information of r2d2
-       :param request:
-       :return:
-       """
-    return render(request, "product_2.html", product_data[1])
-
-
-def product_3(request: HttpRequest, ) -> HttpResponse:
-    """
-       funcion return render information of c3po
-       :param request:
-       :return:
-       """
-    return render(request, "product_3.html", product_data[2])
-
-
-def product_4(request: HttpRequest, ) -> HttpResponse:
-    """
-       funcion return render information of bender
-       :param request:
-       :return:
-       """
-    return render(request, "product_4.html", product_data[3])
