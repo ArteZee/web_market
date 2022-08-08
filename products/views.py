@@ -40,7 +40,7 @@ product_data = [{
         "price": 100_000.99,
         "img": "https://free-png.ru/wp-content/uploads/2022/01/free-png.ru-427.png",
     },
-    {
+        {
         "id": 4,
         "product": "Bender",
         "slug": "bender",
