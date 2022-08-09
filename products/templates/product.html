@@ -12,14 +12,15 @@
     </style>
 
 
-        <img src= "{{ el.product_img }}"  width="300" height="300"
+    <img src="{{ el.product_img }}" width="300" height="300"
          alt="picture">
     <hr>
     <h1>Robot: {{ el.product_name }} </h1>
 
     <div><span style="font-size:35px;color: black">Description: </span> <span
             style="font-size: 30px; ">{{ el.product_description }}</span></div>
-    <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; ">{{ el.product_price }}</span>
+    <div><span style="font-size:35px;color: crimson">Price:</span> <span
+            style="font-size: 30px; ">{{ el.product_price }}</span>
     </div>
 
     {% if  el.product_available %}
