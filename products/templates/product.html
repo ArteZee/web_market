@@ -11,17 +11,18 @@
         }
     </style>
 
-    <img src= "{{ img }}"  width="300" height="300"
+
+        <img src= "{{ el.product_img }}"  width="300" height="300"
          alt="picture">
     <hr>
-    <h1>Robot: {{ product }} </h1>
+    <h1>Robot: {{ el.product_name }} </h1>
 
     <div><span style="font-size:35px;color: black">Description: </span> <span
-            style="font-size: 30px; ">{{ description }}</span></div>
-    <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; ">{{ price }}</span>
+            style="font-size: 30px; ">{{ el.product_description }}</span></div>
+    <div><span style="font-size:35px;color: crimson">Price:</span> <span style="font-size: 30px; ">{{ el.product_price }}</span>
     </div>
 
-    {% if  available %}
+    {% if  el.product_available %}
         <form action="/cart">
             <div><span style="font-size:35px;color: black">Available:</span><span
                     style="font-size: 30px; ">in available</span></div>
@@ -34,5 +35,9 @@
             <button disabled>Buy</button>
         </p>
     {% endif %}
+
+
+
+
 
 {% endblock %}
