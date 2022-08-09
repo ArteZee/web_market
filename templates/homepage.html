@@ -2,83 +2,28 @@
 {% extends "base.html" %}
 {% block title %}Homepage{% endblock %}
 {% block container %}
-    <style>
-        {# frame of images that give equal space between them #}
-        .passe-partout {
-            padding: 10px; /* Passe-partout size */
-            background: #f0f0f0; /* Passe-partout background color */
-            border: 2px solid black; /* Frame Options */
-            display: inline-block; /* Inline-block element*/
-            margin: 1em; /* remove space */
-        }
+    {% include "styles_web/style_hompage.html" %}
 
-        .passe-partout img {
-            border: 3px;
-            /* frame around img */
-        }
-
-        .b_color {
-            background: navy;
-            color: antiquewhite;
-            width: 200px;
-            height: 25px;
-        }
-    </style>
 
     <h1>Catalog</h1>
     <hr color="black">
 
     {#get frame #}
-    <figure class="passe-partout">
-        <img src="https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg" width="200" height="231" alt="Wall E"
-             class="passe-partout">
-        <h1>Robot: Wall E </h1>
-        <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                style="font-size: 30px; "> 50_000.00 </span>
-        </div>
-        <form action="product/wall-e/">І
-            <p>
-                <button class="b_color">More</button>
-            </p>
-        </form>
-    </figure>
+    {% for el in element_product %}
+        <figure class="passe-partout">
+            <img src={{ el.product_img }} width="200" height="231" alt={{ el.product_name }}
+                    class="passe-partout">
+            <h1>Robot: {{ el.product_name }} </h1>
+            <div><span style="font-size:35px;color: crimson">Price:</span> <span
+                    style="font-size: 30px; "> {{ el.product_price }} </span>
+            </div>
+            <form action="product/{{ el.product_slug }}/">
+                <p>
+                    <button class="b_color">More</button>
+                </p>
+            </form>
+        </figure>
+    {% endfor %}
 
-    {#get frame #}
-    <figure class="passe-partout">
-        <img src="https://www.pngmart.com/files/12/R2-D2-PNG-HD.png" width="200" height="231" alt="R2D2"
-             class="passe-partout">
-        <h1>Robot: R2D2 </h1>
-        <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                style="font-size: 30px; "> 75_999.99 </span></div>
-        <form action="product/r2d2/">
-            <p>
-                <button class="b_color">More</button>
-            </p>
-        </form>
-    </figure>
-    {#get frame #}
-    <figure class="passe-partout">
-        <img src="https://img.artpal.com/29308/8-16-11-14-3-37-18m.jpg" width="200" height="231" alt="C3PO"
-             class="passe-partout">
-        <h1>Robot: C3PO </h1>
-        <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                style="font-size: 30px; "> 100_000.99 </span></div>
-        <form action="product/c3po/">
-            <p>
-                <button class="b_color">More</button>
-        </form>
-    </figure>
-    {#get frame #}
-    <figure class="passe-partout">
-        <img src="https://gagadget.com/media/files/u2/2010/07/Bender.jpg" width="200" height="231" alt="bender"
-             class="passe-partout">
-        <h1>Robot: Bender </h1>
-        <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                style="font-size: 30px; "> 99_999.00 </span></div>
-        <form action="product/bender/">
-            <p>
-                <button class="b_color">More</button>
-        </form>
-    </figure>
 
 {% endblock %}
