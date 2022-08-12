@@ -2,25 +2,13 @@
 {% extends "base.html" %}
 {% block title %}Homepage{% endblock %}
 {% block container %}
+    {% include "styles_web/style_cart.html" %}
     <title>Cart</title>
-    <style>
-        table {
-            width: 100%; /* Table width */
-            background: white; /* Table background color */
-            color: white; /* Text color */
-            border-spacing: 1px; /* Distance between cells */
-        }
 
-        td, th {
-            background: darkgreen; /* Cell background color */
-            padding: 5px; /* Margins around text */
-            text-align: center;
-        }
-    </style>
     <table border="5">
         <tbody>
         <tr>
-{#            exectly this will be 30 px#}
+            {#            exectly this will be 30 px#}
             <td width="30px">№</td>
             <td>id</td>
             <td>Name</td>
