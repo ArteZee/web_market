@@ -1,11 +1,14 @@
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpResponse, HttpRequest, Http404
 from django.shortcuts import render
 from .models import ProductModel
 
 
 def product(request: HttpRequest, product_name) -> HttpResponse:
-    context = {"object": ProductModel.objects.get(product_slug=product_name)}
-    return render(request, "product.html", context)
+    try:
+        context = {"object": ProductModel.objects.get(product_slug=product_name)}
+        return render(request, "product.html", context)
+    except ProductModel.DoesNotExist:
+        raise Http404 ("Page not Found")
 
 
 def filter_object(request: HttpRequest, filter_name) -> HttpResponse:
