@@ -1,0 +1,49 @@
+<div style="text-align: right;">
+    <form action="/filter_by/available/" target="_self">
+        <button class="new">По наличию</button>
+    </form>
+    <form>
+        <div class="dropdown">
+            <form>
+                <button disabled class="new"> Price</button>
+                <i class="fa fa-caret-down"></i>
+            </form>
+            <div class="dropdown-content">
+                <form action="/filter_by/50k" target="_self">
+                    <button class="new">for 0 to 50000</button>
+                </form>
+                <form action="/filter_by/50k-99k" target="_self">
+                    <button class="new">for 50.000 - 99.0000</button>
+                </form>
+                <form action="/filter_by/99k-200k" target="_self">
+                    <button class="new">for 99.000 - 200.000</button>
+                </form>
+                <form action="/filter_by/200k-" target="_self">
+                    <button class="new">for 200.000 to ...</button>
+                </form>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="new">Category
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <form action="/filter_class/1" target="_self">
+                    <button class="new">Robots</button>
+                </form>
+                <form action="/filter_class/2" target="_self">
+                    <button class="new">Star Wars</button>
+                </form>
+                <form action="/filter_class/3" target="_self">
+                    <button class="new">Cartoon</button>
+                </form>
+                <form action="/filter_class/4" target="_self">
+                    <button class="new">Film</button>
+                </form>
+                <form action="/filter_class/5" target="_self">
+                    <button class="new">Game</button>
+                </form>
+            </div>
+        </div>
+    </form>
+</div>
