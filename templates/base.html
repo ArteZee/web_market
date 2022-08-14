@@ -2,36 +2,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} Default tittle {% endblock %}</title>
-
+    <style>
+        ul {
+            list-style: none; /*убираем маркеры списка*/
+            margin: 0; /*убираем отступы*/
+            padding-left: 0; /*убираем отступы*/
+        }
+        a {
+            text-decoration: none; /*убираем подчеркивание текста ссылок*/
+        }
+        li {
+            float: left; /*Размещаем список горизонтально для реализации меню*/
+            margin-right: 5px; /*Добавляем отступ у пунктов меню*/
+        }
+    </style>
 </head>
 <body>
-
-
-<nav>
-    <div style="text-align: center;">
-
-        <form action="/" target="_self">
-            <button>Home</button>
-        </form>
-
-        <form action="/cart" target="_self">
-            <button>Cart</button>
-        </form>
-
-        <form action="/profile" target="_self">
-            <button class="button_menu">ArteZee</button>
-        </form>
-    </div>
+<nav class="one">
+    <ul>
+        <li><a>
+            <form action="/" target="_self">
+                <button>Home</button>
+            </form>
+        </a></li>
+        <li>
+            <form action="/cart" target="_self">
+                <button>Cart</button>
+            </form>
+        </li>
+        <li>
+            <form action="/profile" target="_self">
+                <button>ArteZee</button>
+            </form>
+        </li>
+    </ul>
 </nav>
 </body>
 <div class="container ">
     {% block container %}{% endblock %}
 </div>
-
 </html>

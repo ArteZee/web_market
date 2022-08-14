@@ -3,12 +3,9 @@
 {% block title %}Homepage{% endblock %}
 {% block container %}
     {% include "styles_web/style_hompage.html" %}
-
-
-    <h1>Catalog</h1>
+    <h1 align="center">Catalog</h1>
     <hr color="black">
-
-    {#get frame #}
+ {% include "filters_button.html" %}
     {% for el in element_product %}
         <figure class="passe-partout">
             <img src={{ el.product_img }} width="200" height="231" alt={{ el.product_name }}
@@ -17,13 +14,14 @@
             <div><span style="font-size:35px;color: crimson">Price:</span> <span
                     style="font-size: 30px; "> {{ el.product_price }} </span>
             </div>
-            <form action="product/{{ el.product_slug }}/">
+            <a href="{% url "product" product_name=el.product_slug %}">
                 <p>
                     <button class="b_color">More</button>
                 </p>
-            </form>
+            </a>
         </figure>
     {% endfor %}
-
-
+    {% for el in element_product %}
+        <h1> {{ el.product_name}}</h1>
+    {% endfor %}
 {% endblock %}
