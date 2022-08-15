@@ -7,23 +7,18 @@
             color: antiquewhite;
             width: 200px;
             height: 25px;
-
         }
     </style>
-
-
-    <img src="{{ el.product_img }}" width="300" height="300"
+    <img src="{{ object.product_img }}" width="300" height="300"
          alt="picture">
     <hr>
-    <h1>Robot: {{ el.product_name }} </h1>
-
+    <h1>Robot: {{ object.product_name }} </h1>
     <div><span style="font-size:35px;color: black">Description: </span> <span
-            style="font-size: 30px; ">{{ el.product_description }}</span></div>
+            style="font-size: 30px; ">{{ object.product_description }}</span></div>
     <div><span style="font-size:35px;color: crimson">Price:</span> <span
-            style="font-size: 30px; ">{{ el.product_price }}</span>
+            style="font-size: 30px; ">{{ object.product_price }}</span>
     </div>
-
-    {% if  el.product_available %}
+    {% if  object.product_available %}
         <form action="/cart">
             <div><span style="font-size:35px;color: black">Available:</span><span
                     style="font-size: 30px; ">in available</span></div>
@@ -36,9 +31,4 @@
             <button disabled>Buy</button>
         </p>
     {% endif %}
-
-
-
-
-
 {% endblock %}

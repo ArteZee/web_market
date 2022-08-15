@@ -15,3 +15,6 @@ def about(request: HttpRequest) -> HttpResponse:
     :return:
     """
     return render(request, "cart.html")
+
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)

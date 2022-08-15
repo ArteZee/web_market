@@ -25,3 +25,5 @@ urlpatterns = [
     path("", include("user.urls")),
 
 ]
+
+handler404 = "web_market.views.page_not_found_view"
