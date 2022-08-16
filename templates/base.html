@@ -13,9 +13,11 @@
             margin: 0; /*убираем отступы*/
             padding-left: 0; /*убираем отступы*/
         }
+
         a {
             text-decoration: none; /*убираем подчеркивание текста ссылок*/
         }
+
         li {
             float: left; /*Размещаем список горизонтально для реализации меню*/
             margin-right: 5px; /*Добавляем отступ у пунктов меню*/
@@ -23,6 +25,7 @@
     </style>
 </head>
 <body>
+<header class="active-user">Active user: {{ user }}</header>
 <nav class="one">
     <ul>
         <li><a>
@@ -35,11 +38,21 @@
                 <button>Cart</button>
             </form>
         </li>
-        <li>
-            <form action="/profile" target="_self">
-                <button>ArteZee</button>
-            </form>
-        </li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url "user_profile" %}">
+                <button>{{ user.username }}</button>
+            </a></li>
+            <li><a href="{% url "logout" %}">
+                <button>Logout</button>
+            </a></li>
+        {% else %}
+            <li><a href="{% url "login" %}">
+                <button>Login</button>
+            </a></li>
+            <li><a href="{% url "register" %}">
+                <button>Register</button>
+            </a></li>
+        {% endif %}
     </ul>
 </nav>
 </body>
