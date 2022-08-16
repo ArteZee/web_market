@@ -2,11 +2,15 @@
 {% block title %}Login{% endblock %}
 {% block container %}
     <div>Message: {{ message }}</div>
-    <form method="post">
+    <form method="post" >
         {% csrf_token %}
+        <p><b>Your nickname:</b><br>
         <input id="username" name="username" type="text">
+        <p><b>Please put your password:</b><Br>
         <input id="password1" name="password1" type="password">
+         <p><b>Please repeat your password:</b><Br>
         <input id="password2" name="password2" type="password">
+         <p><b>Put your email:</b><Br>
         <input id="email" name="email" type="email">
         <input type="submit">
     </form>
