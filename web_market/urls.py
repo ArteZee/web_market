@@ -1,5 +1,4 @@
 """web_market URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
 Examples:
@@ -16,14 +15,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from web_market import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.homepage),
+    path("", views.homepage, name="homepage"),
     path("cart", views.about),
     path("", include("products.urls")),
     path("", include("user.urls")),
-
 ]
-
 handler404 = "web_market.views.page_not_found_view"
