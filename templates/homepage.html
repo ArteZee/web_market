@@ -13,28 +13,21 @@
         {% else %}
             <figure class="passe-partout">
         {% endif %}
-           <img src={{ el.product_img }} width="200" height="231" alt={{ el.product_name }}
-                    class="passe-partout">
-            <h1>Robot: {{ el.product_name }} </h1>
-            <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                    style="font-size: 30px; "> {{ el.product_price }} </span>
-            </div>
-            {% if not el.product_available %}
-                <h2>not available</h2>
-            {% endif %}
-            <a href="{% url "product" product_name=el.product_slug %}">
-                <p>
-                    <button class="new">More</button>
-                </p>
-            </a>
-        </figure>
-
-
-
-
-
-
-
+    <img src={{ el.product_img }} width="200" height="231" alt={{ el.product_name }}
+            class="passe-partout">
+    <h1>Robot: {{ el.product_name }} </h1>
+    <div><span style="font-size:35px;color: crimson">Price:</span> <span
+            style="font-size: 30px; "> {{ el.product_price }} </span>
+    </div>
+    {% if not el.product_available %}
+        <h2>not available</h2>
+    {% endif %}
+    <a href="{% url "product" product_name=el.product_slug %}">
+        <p>
+            <button class="new">More</button>
+        </p>
+    </a>
+    </figure>
 
     {% endfor %}
 {% endblock %}

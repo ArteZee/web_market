@@ -4,8 +4,7 @@
     <div>Message: {{ message }}</div>
     <form method="post">
         {% csrf_token %}
-        <input id="username" name="username" type="text">
-        <input id="password" name="password" type="password">
+        {{ form.as_p }}
         <input type="submit">
     </form>
 {% endblock %}
