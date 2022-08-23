@@ -1,0 +1,47 @@
+[
+  {
+    "model": "products.categorymodel",
+    "pk": 1,
+    "fields": {
+      "name": "Robots",
+      "slug": "robots",
+      "description": "This category displays all the robots in our store"
+    }
+  },
+  {
+    "model": "products.categorymodel",
+    "pk": 2,
+    "fields": {
+      "name": "Star Wars",
+      "slug": "star_wars",
+      "description": "star"
+    }
+  },
+  {
+    "model": "products.categorymodel",
+    "pk": 3,
+    "fields": {
+      "name": "Cartoon",
+      "slug": "cartoon",
+      "description": "cartoon"
+    }
+  },
+  {
+    "model": "products.categorymodel",
+    "pk": 4,
+    "fields": {
+      "name": "Film",
+      "slug": "film",
+      "description": "film"
+    }
+  },
+  {
+    "model": "products.categorymodel",
+    "pk": 5,
+    "fields": {
+      "name": "Game",
+      "slug": "game",
+      "description": "robots in games"
+    }
+  }
+]
