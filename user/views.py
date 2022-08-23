@@ -30,7 +30,7 @@ class UserCreateView(CreateView):
     model = UserModel
     form_class = RegisterForm
     template_name = "register.html"
-    success_url = "/login"
+    success_url = "/"
 
 
 class UserUpdateView(UpdateView):
