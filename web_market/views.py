@@ -1,20 +1,18 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from django.views.generic import ListView, TemplateView
+
 from products.models import ProductModel
 
 
-def homepage(request: HttpRequest) -> HttpResponse:
-    element_product = ProductModel.objects.all()
-    return render(request, "homepage.html", {"element_product": element_product})
+class HomepageListView(ListView):
+    queryset = ProductModel.objects.all()
+    template_name = "homepage.html"
 
 
-def about(request: HttpRequest) -> HttpResponse:
-    """
-    fucntion return render html cart
-    :param request:
-    :return:
-    """
-    return render(request, "cart.html")
+class CartTemplateView(TemplateView):
+    template_name = "cart.html"
+
 
 def page_not_found_view(request, exception):
     return render(request, '404.html', status=404)

@@ -6,7 +6,7 @@
     <h1 align="center">Catalog</h1>
     <hr color="black">
     {% include "filters_button.html" %}
-    {% for el in element_product %}
+    {% for el in object_list %}
 
         {% if not el.product_available %}
             <figure class="passe-partout" style="background: dimgrey">
