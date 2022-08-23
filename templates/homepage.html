@@ -6,23 +6,23 @@
     <h1 align="center">Catalog</h1>
     <hr color="black">
     {% include "filters_button.html" %}
-    {% for el in object_list %}
+    {% for el in element_product %}
 
-        {% if not el.available %}
+        {% if not el.product_available %}
             <figure class="passe-partout" style="background: dimgrey">
         {% else %}
             <figure class="passe-partout">
         {% endif %}
-           <img src={{ el.img }} width="200" height="231" alt={{ el.name }}
+           <img src={{ el.product_img }} width="200" height="231" alt={{ el.product_name }}
                     class="passe-partout">
-            <h1>Robot: {{ el.name }} </h1>
+            <h1>Robot: {{ el.product_name }} </h1>
             <div><span style="font-size:35px;color: crimson">Price:</span> <span
-                    style="font-size: 30px; "> {{ el.price }} </span>
+                    style="font-size: 30px; "> {{ el.product_price }} </span>
             </div>
             {% if not el.product_available %}
                 <h2>not available</h2>
             {% endif %}
-            <a href="{% url "product" slug=el.slug %}">
+            <a href="{% url "product" product_name=el.product_slug %}">
                 <p>
                     <button class="new">More</button>
                 </p>

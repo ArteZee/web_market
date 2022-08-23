@@ -3,10 +3,29 @@
 {% block container %}
     <h1>User profile:{{ user.username }} </h1>
     <hr>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+    <a href="{% url "user:change-data" slug=object.username %}">
+        <button>Edit data</button>
+    </a>
+
     <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" width="200" height="200"
          alt="picture">
-    <div><span style="font-size:35px;color: gray">Nickname:</span> <span
+    <div><span style="font-size:35px;color: gray">username:</span> <span
             style="font-size: 30px; ">{{ user.username }}</span></div>
+    <div><span style="font-size:35px;color: gray">First Name:</span> <span
+            style="font-size: 30px; ">{{ user.first_name }}</span></div>
+    <div><span style="font-size:35px;color: gray">Last Name:</span> <span
+            style="font-size: 30px; ">{{ user.last_name }}</span></div>
     <div><span style="font-size:35px;color: gray">Email:</span> <span
             style="font-size: 30px; ">{{ user.email }}</span></div>
+    <div><span style="font-size:35px;color: gray">Age:</span> <span
+            style="font-size: 30px; ">{{ user.age }}</span></div>
+    <div><span style="font-size:35px;color: gray">Sex:</span> <span
+            style="font-size: 30px; ">{{ user.sex }}</span></div>
+
+
 {% endblock %}
