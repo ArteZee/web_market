@@ -39,17 +39,17 @@
             </form>
         </li>
         {% if user.is_authenticated %}
-            <li><a href="{% url "user_profile" %}">
+            <li><a href="{% url "user:user" slug=user.username %}">
                 <button>{{ user.username }}</button>
             </a></li>
-            <li><a href="{% url "logout" %}">
+            <li><a href="{% url "user:logout" %}">
                 <button>Logout</button>
             </a></li>
         {% else %}
-            <li><a href="{% url "login" %}">
+            <li><a href="{% url "user:login" %}">
                 <button>Login</button>
             </a></li>
-            <li><a href="{% url "register" %}">
+            <li><a href="{% url "user:register" %}">
                 <button>Register</button>
             </a></li>
         {% endif %}
