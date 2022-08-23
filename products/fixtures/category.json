@@ -3,75 +3,45 @@
     "model": "products.categorymodel",
     "pk": 1,
     "fields": {
-<<<<<<< HEAD
       "name": "Robots",
       "slug": "robots",
       "description": "This category displays all the robots in our store"
-=======
-      "name_category": "Robots",
-      "slug_category": "robots",
-      "description_category": "This category displays all the robots in our store"
->>>>>>> master
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 2,
     "fields": {
-<<<<<<< HEAD
       "name": "Star Wars",
       "slug": "star_wars",
       "description": "star"
-=======
-      "name_category": "Star Wars",
-      "slug_category": "star_wars",
-      "description_category": "star"
->>>>>>> master
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 3,
     "fields": {
-<<<<<<< HEAD
       "name": "Cartoon",
       "slug": "cartoon",
       "description": "cartoon"
-=======
-      "name_category": "Cartoon",
-      "slug_category": "cartoon",
-      "description_category": "cartoon"
->>>>>>> master
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 4,
     "fields": {
-<<<<<<< HEAD
       "name": "Film",
       "slug": "film",
       "description": "film"
-=======
-      "name_category": "Film",
-      "slug_category": "film",
-      "description_category": "film"
->>>>>>> master
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 5,
     "fields": {
-<<<<<<< HEAD
       "name": "Game",
       "slug": "game",
       "description": "robots in games"
-=======
-      "name_category": "Game",
-      "slug_category": "game",
-      "description_category": "robots in games"
->>>>>>> master
     }
   }
 ]

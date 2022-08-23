@@ -3,13 +3,13 @@
     "model": "products.productmodel",
     "pk": 1,
     "fields": {
-      "product_name": "Wall E",
-      "product_slug": "wall-e",
-      "product_price": 50000,
-      "product_description": "The robot WALL E has been diligently working on the deserted Earth year after year, cleaning our planet from mountains of garbage,which people who flew into space left behind. He has no idea what will happen very soonincredible events through which he will meet friends, rise to the stars and even be able to change to to the best of their former owners, who completely forgot their native Earth",
-      "product_count": 0,
-      "product_available": false,
-      "product_img": "https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg",
+      "name": "Wall E",
+      "slug": "wall-e",
+      "price": 50000,
+      "description": "The robot WALL E has been diligently working on the deserted Earth year after year, cleaning our planet from mountains of garbage,which people who flew into space left behind. He has no idea what will happen very soonincredible events through which he will meet friends, rise to the stars and even be able to change to to the best of their former owners, who completely forgot their native Earth",
+      "count": 0,
+      "available": false,
+      "img": "https://gagadget.com/media/files/u2/2010/07/Wall-E.jpg",
       "category": 3
     }
   },
@@ -17,13 +17,13 @@
     "model": "products.productmodel",
     "pk": 2,
     "fields": {
-      "product_name": "R2D2",
-      "product_slug": "r2d2",
-      "product_price": 75999,
-      "product_description": "R2 is barrel shaped with a rotating dome acting as its head and including a single eye. It has three props that allow it to walk, and each one has a wheel.Unlike his fellow protocol droid C-3PO, R2-D2 does not talk, but communicates viasequences of bleeps, whistles, and trills that C-3PO can translate. It appears that his masters also understand what he wants to say. Also, when connected to a fighter, R2-D2 cancommunicate with the pilot by typing your lines on the monitor.",
-      "product_count": 15,
-      "product_available": true,
-      "product_img": "https://static.wikia.nocookie.net/rustarwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20151106094927",
+      "name": "R2D2",
+      "slug": "r2d2",
+      "price": 75999,
+      "description": "R2 is barrel shaped with a rotating dome acting as its head and including a single eye. It has three props that allow it to walk, and each one has a wheel.Unlike his fellow protocol droid C-3PO, R2-D2 does not talk, but communicates viasequences of bleeps, whistles, and trills that C-3PO can translate. It appears that his masters also understand what he wants to say. Also, when connected to a fighter, R2-D2 cancommunicate with the pilot by typing your lines on the monitor.",
+      "count": 15,
+      "available": true,
+      "img": "https://static.wikia.nocookie.net/rustarwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20151106094927",
       "category": 2
     }
   },
@@ -31,13 +31,13 @@
     "model": "products.productmodel",
     "pk": 3,
     "fields": {
-      "product_name": "C3PO",
-      "product_slug": "c3po",
-      "product_price": 100000,
-      "product_description": "The constant companion of R2D2 is the protocol robot C3PO, who is known to speak two million languages,including the language of the R2D2 robot. Looks stupid and sometimes cowardly, which does not prevent him from arousing sympathy.Albeit smaller than his vacuum cleaner partner.",
-      "product_count": 13,
-      "product_available": true,
-      "product_img": "https://free-png.ru/wp-content/uploads/2022/01/free-png.ru-427.png",
+      "name": "C3PO",
+      "slug": "c3po",
+      "price": 100000,
+      "description": "The constant companion of R2D2 is the protocol robot C3PO, who is known to speak two million languages,including the language of the R2D2 robot. Looks stupid and sometimes cowardly, which does not prevent him from arousing sympathy.Albeit smaller than his vacuum cleaner partner.",
+      "count": 13,
+      "available": true,
+      "img": "https://free-png.ru/wp-content/uploads/2022/01/free-png.ru-427.png",
       "category": 2
     }
   },
@@ -45,13 +45,13 @@
     "model": "products.productmodel",
     "pk": 4,
     "fields": {
-      "product_name": "Bender",
-      "product_slug": "bender",
-      "product_price": 99999,
-      "product_description": "Rough and alcoholic, lover of cigars and foul language, Bender is, however, sympathy.Maybe the whole point is that he always remains himself, says what he thinks(except for those frequent times when he lies) and does not try to be someone else",
-      "product_count": 3,
-      "product_available": true,
-      "product_img": "https://gagadget.com/media/files/u2/2010/07/Bender.jpg",
+      "name": "Bender",
+      "slug": "bender",
+      "price": 99999,
+      "description": "Rough and alcoholic, lover of cigars and foul language, Bender is, however, sympathy.Maybe the whole point is that he always remains himself, says what he thinks(except for those frequent times when he lies) and does not try to be someone else",
+      "count": 3,
+      "available": true,
+      "img": "https://gagadget.com/media/files/u2/2010/07/Bender.jpg",
       "category": 3
     }
   },
@@ -59,13 +59,13 @@
     "model": "products.productmodel",
     "pk": 5,
     "fields": {
-      "product_name": "Optimus Prime",
-      "product_slug": "optimus-prime",
-      "product_price": 225000,
-      "product_description": "Optimus Prime is a fictional character from the Transformers franchise. Optimus Prime is consistently depicted as having strong moral character, excellent leadership, and sound decision-making skills, and possesses brilliant military tactics, powerful martial arts, and advanced alien weaponry",
-      "product_count": 100,
-      "product_available": true,
-      "product_img": "https://www.kindpng.com/picc/m/143-1430792_optimus-prime-png-transparent-png.png",
+      "name": "Optimus Prime",
+      "slug": "optimus-prime",
+      "price": 225000,
+      "description": "Optimus Prime is a fictional character from the Transformers franchise. Optimus Prime is consistently depicted as having strong moral character, excellent leadership, and sound decision-making skills, and possesses brilliant military tactics, powerful martial arts, and advanced alien weaponry",
+      "count": 100,
+      "available": true,
+      "img": "https://www.kindpng.com/picc/m/143-1430792_optimus-prime-png-transparent-png.png",
       "category": 4
     }
   },
@@ -73,13 +73,13 @@
     "model": "products.productmodel",
     "pk": 6,
     "fields": {
-      "product_name": "Megatron",
-      "product_slug": "megatron",
-      "product_price": 120000,
-      "product_description": "Megatron is the cruel and tyrannical leader of the Decepticons, a faction of sentient, war-mongering robotic lifeforms that seeks to conquer their home planet of Cybertron and the rest of the known universe. He serves as the archenemy of Optimus Prime, the leader of the rival Autobot faction.",
-      "product_count": 25,
-      "product_available": true,
-      "product_img": "https://cdn.fishki.net/upload/post/201407/28/1288812/megatron.jpg",
+      "name": "Megatron",
+      "slug": "megatron",
+      "price": 120000,
+      "description": "Megatron is the cruel and tyrannical leader of the Decepticons, a faction of sentient, war-mongering robotic lifeforms that seeks to conquer their home planet of Cybertron and the rest of the known universe. He serves as the archenemy of Optimus Prime, the leader of the rival Autobot faction.",
+      "count": 25,
+      "available": true,
+      "img": "https://cdn.fishki.net/upload/post/201407/28/1288812/megatron.jpg",
       "category": 4
     }
   },
@@ -87,13 +87,13 @@
     "model": "products.productmodel",
     "pk": 7,
     "fields": {
-      "product_name": "Dog",
-      "product_slug": "dog",
-      "product_price": 25000,
-      "product_description": "Dog is a robot, built by Eli Vance to protect his daughter Alyx when she was a child. Dog's original model was around one meter in height, but as Alyx grew older, she began adding upgrades and new parts to Dog, and he towers around 2.5 meters tall at the time of Half-Life 2",
-      "product_count": 1,
-      "product_available": true,
-      "product_img": "https://static.wikia.nocookie.net/half-life/images/6/67/DOG_model.jpg/revision/latest?cb=20090527042852&path-prefix=en",
+      "name": "Dog",
+      "slug": "dog",
+      "price": 25000,
+      "description": "Dog is a robot, built by Eli Vance to protect his daughter Alyx when she was a child. Dog's original model was around one meter in height, but as Alyx grew older, she began adding upgrades and new parts to Dog, and he towers around 2.5 meters tall at the time of Half-Life 2",
+      "count": 1,
+      "available": true,
+      "img": "https://static.wikia.nocookie.net/half-life/images/6/67/DOG_model.jpg/revision/latest?cb=20090527042852&path-prefix=en",
       "category": 5
     }
   },
@@ -101,13 +101,13 @@
     "model": "products.productmodel",
     "pk": 8,
     "fields": {
-      "product_name": "Claptrap",
-      "product_slug": "claptrap",
-      "product_price": 1000,
-      "product_description": "Claptrap is a fictional character that appears in the Gearbox Software video game series Borderlands. Claptrap is a CL4P-TP general purpose robot manufactured by Hyperion and has been programmed with an overenthusiastic personality. It brags frequently, yet also expresses severe loneliness and cowardice",
-      "product_count": 25,
-      "product_available": true,
-      "product_img": "https://static.wikia.nocookie.net/borderlands/images/3/3a/3-0.png/revision/latest/scale-to-width-down/1200?cb=20150201155010&path-prefix=ru",
+      "name": "Claptrap",
+      "slug": "claptrap",
+      "price": 1000,
+      "description": "Claptrap is a fictional character that appears in the Gearbox Software video game series Borderlands. Claptrap is a CL4P-TP general purpose robot manufactured by Hyperion and has been programmed with an overenthusiastic personality. It brags frequently, yet also expresses severe loneliness and cowardice",
+      "count": 25,
+      "available": true,
+      "img": "https://static.wikia.nocookie.net/borderlands/images/3/3a/3-0.png/revision/latest/scale-to-width-down/1200?cb=20150201155010&path-prefix=ru",
       "category": 5
     }
   }
