@@ -19,7 +19,7 @@
             <div><span style="font-size:35px;color: crimson">Price:</span> <span
                     style="font-size: 30px; "> {{ el.price }} </span>
             </div>
-            {% if not el.product_available %}
+            {% if not el.available %}
                 <h2>not available</h2>
             {% endif %}
             <a href="{% url "product" slug=el.slug %}">
