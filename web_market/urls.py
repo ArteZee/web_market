@@ -17,8 +17,8 @@ from django.urls import path, include
 from web_market import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.homepage, name="homepage"),
-    path("cart", views.about),
+    path("", views.HomepageListView.as_view(), name="homepage"),
+    path("cart", views.CartTemplateView.as_view(), name= "cart"),
     path("", include("products.urls")),
     path("", include("user.urls")),
 ]

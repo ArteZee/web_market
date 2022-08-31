@@ -9,7 +9,7 @@ from user.models import UserModel
 class RegisterForm(forms.UserCreationForm):
     class Meta:
         model = UserModel
-        fields = ["username", "first_name", "last_name", "email", "age", "sex", "password1", "password2", ]
+        fields = ["username", "first_name", "last_name", "email", "age", "gender", "password1", "password2", ]
 
 
 class LoginForm(forms.AuthenticationForm):
@@ -21,4 +21,4 @@ class LoginForm(forms.AuthenticationForm):
 class Edit_LoginForm(forms.UserChangeForm):
     class Meta:
         model = UserModel
-        fields = ["username", "password", "first_name", "last_name", "email", "age", "sex", ]
+        fields = ["username", "password", "first_name", "last_name", "email", "age", "gender", ]

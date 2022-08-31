@@ -1,9 +1,9 @@
 """Product  URL Configuration """
 from django.urls import path
-from products.views import product, filter_object, filter_class
+from products.views import ProductDetailView, filter_object, FilterDetailView
 
 urlpatterns = [
-    path("product/<str:product_name>/", product, name="product"),
+    path("product/<slug:slug>/", ProductDetailView.as_view(), name="product"),
     path("filter_by/<str:filter_name>/", filter_object, name="filter-object"),
-    path("filter_class/<str:slug>/", filter_class, name="filter-object"),
+    path("filter_class/<str:category_id>/", FilterDetailView.as_view(), name="filter-object"),
 ]

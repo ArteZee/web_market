@@ -3,45 +3,45 @@
     "model": "products.categorymodel",
     "pk": 1,
     "fields": {
-      "name_category": "Robots",
-      "slug_category": "robots",
-      "description_category": "This category displays all the robots in our store"
+      "name": "Robots",
+      "slug": "robots",
+      "description": "This category displays all the robots in our store"
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 2,
     "fields": {
-      "name_category": "Star Wars",
-      "slug_category": "star_wars",
-      "description_category": "star"
+      "name": "Star Wars",
+      "slug": "star_wars",
+      "description": "star"
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 3,
     "fields": {
-      "name_category": "Cartoon",
-      "slug_category": "cartoon",
-      "description_category": "cartoon"
+      "name": "Cartoon",
+      "slug": "cartoon",
+      "description": "cartoon"
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 4,
     "fields": {
-      "name_category": "Film",
-      "slug_category": "film",
-      "description_category": "film"
+      "name": "Film",
+      "slug": "film",
+      "description": "film"
     }
   },
   {
     "model": "products.categorymodel",
     "pk": 5,
     "fields": {
-      "name_category": "Game",
-      "slug_category": "game",
-      "description_category": "robots in games"
+      "name": "Game",
+      "slug": "game",
+      "description": "robots in games"
     }
   }
 ]

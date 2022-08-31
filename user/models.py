@@ -13,7 +13,7 @@ class UserModel(AbstractUser):
         ("f", "Women")
 
     )
-    sex = models.CharField(max_length=1, choices=genders, default="")
+    gender = models.CharField(max_length=1, choices=genders, default="")
     age = models.IntegerField(null=True, blank=True, )
 
     class Meta:
