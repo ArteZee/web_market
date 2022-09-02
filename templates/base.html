@@ -34,10 +34,10 @@
             </form>
         </a></li>
         <li>
-            <form action="/cart" target="_self">
+            <a href="{% url "cart:cart_detail" %}">
                 <button>Cart</button>
             </form>
-        </li>
+        </a></li>
         {% if user.is_authenticated %}
             <li><a href="{% url "user:user" slug=user.username %}">
                 <button>{{ user.username }}</button>

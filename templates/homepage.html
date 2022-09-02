@@ -22,7 +22,7 @@
             {% if not el.available %}
                 <h2>not available</h2>
             {% endif %}
-            <a href="{% url "product" slug=el.slug %}">
+            <a href="{% url "product:product" slug=el.slug %}">
                 <p>
                     <button class="new">More</button>
                 </p>

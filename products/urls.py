@@ -1,7 +1,7 @@
 """Product  URL Configuration """
 from django.urls import path
 from products.views import ProductDetailView, filter_object, FilterDetailView
-
+app_name = "product"
 urlpatterns = [
     path("product/<slug:slug>/", ProductDetailView.as_view(), name="product"),
     path("filter_by/<str:filter_name>/", filter_object, name="filter-object"),

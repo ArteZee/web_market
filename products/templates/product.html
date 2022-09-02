@@ -20,10 +20,12 @@
     </div>
 
     {% if  object.available %}
-        <div><span style="font-size:35px;color: crimson">Count:</span> <span
-                style="font-size: 30px; ">{{ object.count }}</span>
-        </div>
-        <button class="b_color">Buy</button>
+        <p class="price">${{ object.price }}</p>
+        <form action="{% url "cart:cart_add" object.slug %}" method="post">
+            {{ object_list }}
+            {% csrf_token %}
+            <input type="submit" value="Add to cart">
+        </form>
 
     {% else %}
         <div><span style="font-size:35px;color: gray">Available:</span><span style="font-size: 30px; ">None</span></div>
@@ -31,5 +33,7 @@
             <button disabled>Buy</button>
         </p>
 
+
     {% endif %}
+
 {% endblock %}
