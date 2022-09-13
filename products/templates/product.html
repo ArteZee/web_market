@@ -18,9 +18,12 @@
     <div><span style="font-size:35px;color: crimson">Price:</span> <span
             style="font-size: 30px; ">{{ object.price }}</span>
     </div>
+    <div><span style="font-size:35px;color: crimson">Count:</span> <span
+            style="font-size: 30px; ">{{ object.count }}</span>
+    </div>
 
     {% if  object.available %}
-        <p class="price">${{ object.price }}</p>
+
         <form action="{% url "cart:cart_add" object.slug %}" method="post">
             {{ object_list }}
             {% csrf_token %}
