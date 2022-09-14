@@ -1,40 +1,30 @@
-from django.http import HttpResponse, HttpRequest, Http404
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView, ListView
+from django.http import HttpResponse, HttpRequest, Http404, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views import View
+from django.views.generic import DetailView, ListView, CreateView
 from cart.forms import CartAddProductForm
 from .models import ProductModel
+from products.forms import ProductForm
+from .utils import ObjectCreateMixin
 
 
-# def product(request: HttpRequest, product_slug) -> HttpResponse:
-#     try:
-#         context = {"object": ProductModel.objects.get(product_slug=product_slug)}
-#         return render(request, "product.html", context)
-#     except ProductModel.DoesNotExist:
-#         raise Http404 ("Page not Found")
+class ProductCreate(ObjectCreateMixin, View):
+    form_model = ProductForm
+    template = "create_update_form.html"
+
 
 class ProductDetailView(DetailView):
     model = ProductModel
     template_name = "product.html"
 
-    def get_context_data(self,  **kwargs):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         cart_product_form = CartAddProductForm()
-        context["object_list"]=cart_product_form
+        context["object_list"] = cart_product_form
         return context
 
-
     def get_object(self, **kwargs):
-
         return ProductModel.objects.get(slug=self.kwargs['slug'])
-
-    # def product_detail(request, id, slug):
-    #     product = get_object_or_404(ProductModel,
-    #                                 id=id,
-    #
-    #                                 available=True)
-    #     cart_product_form = CartAddProductForm()
-    #     return render(request, 'product.html', {'product': product,
-    #                                                         'cart_product_form': cart_product_form})
 
 
 def filter_object(request: HttpRequest, filter_name) -> HttpResponse:
@@ -51,10 +41,12 @@ def filter_object(request: HttpRequest, filter_name) -> HttpResponse:
     context = {"object_list": element_product}
     return render(request, "homepage.html", context)
 
+
 class FilterDetailView(ListView):
     model = ProductModel
     template_name = "homepage.html"
-    def get_context_data(self,  **kwargs):
+
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["object_list"] =ProductModel.objects.filter(category_id=self.kwargs['category_id'])
+        context["object_list"] = ProductModel.objects.filter(category_id=self.kwargs['category_id'])
         return context

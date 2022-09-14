@@ -36,7 +36,7 @@
         <li>
             <a href="{% url "cart:cart_detail" %}">
                 <button>Cart</button>
-            </form>
+
         </a></li>
         {% if user.is_authenticated %}
             <li><a href="{% url "user:user" slug=user.username %}">
@@ -53,6 +53,11 @@
                 <button>Register</button>
             </a></li>
         {% endif %}
+    <li>
+            <a href="{% url "product:product-create" %}">
+                <button>Create item</button>
+
+        </a></li>
     </ul>
 </nav>
 </body>
