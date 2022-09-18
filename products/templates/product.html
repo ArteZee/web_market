@@ -21,6 +21,13 @@
     <div><span style="font-size:35px;color: crimson">Count:</span> <span
             style="font-size: 30px; ">{{ object.count }}</span>
     </div>
+    {% if user.is_staff %}
+        <div>
+            <a href="{% url "product:product-update" object.slug%}">
+                <button>Update item</button>
+
+        </a></div>
+    {% endif %}
 
     {% if  object.available %}
 

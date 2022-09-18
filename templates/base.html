@@ -53,11 +53,14 @@
                 <button>Register</button>
             </a></li>
         {% endif %}
-    <li>
+    {% if user.is_staff %}
+         <li>
             <a href="{% url "product:product-create" %}">
                 <button>Create item</button>
 
         </a></li>
+    {% endif %}
+
     </ul>
 </nav>
 </body>

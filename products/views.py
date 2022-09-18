@@ -5,13 +5,17 @@ from django.views.generic import DetailView, ListView, CreateView
 from cart.forms import CartAddProductForm
 from .models import ProductModel
 from products.forms import ProductForm
-from .utils import ObjectCreateMixin
+from .utils import ObjectCreateMixin,ObjecttUpdateMixin
 
 
 class ProductCreate(ObjectCreateMixin, View):
     form_model = ProductForm
     template = "create_update_form.html"
 
+class ProductUpdate(ObjecttUpdateMixin,View):
+    model = ProductModel
+    form_model = ProductForm
+    template = "create_update_form.html"
 
 class ProductDetailView(DetailView):
     model = ProductModel
