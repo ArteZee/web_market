@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%  extends "base.html" %}
+{% block title %}Orders{% endblock %}
+{% block container %}
+    <h1>Your Orders</h1>
+    {% for item in cart  %}
+        <h3>{{ item.quantity }}x {{ item.user }}</h3>
 
-</body>
-</html>
+        <li>
+                    {{ item.quantity }}x {{ item.product.name }}x{{ item.user_id }}
+                    <span>${{ item.total_price }}</span>
+                </li>
+
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,50 @@
+        {%  extends "base.html" %}
+{% block title %}Orders{% endblock %}
+{% block container %}
+    <h1>Your Orders</h1>
+     {% include "styles_web/style_cart.html" %}
+
+
+      <table border="5">
+        <tbody>
+        <tr>
+            {#            exectly this will be 30 px#}
+{#            <td width="30px">№</td>#}
+            <td>Create</td>
+            <td>username</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Count</td>
+            <td>Summarize</td>
+            <td>Process</td>
+
+        </tr>
+        {% for element in object  %}
+            <tr>
+                <td>{{element.created }}</td>
+                <td>{{ element.user }}</td>
+                <td>{{element.product }}</td>
+                <td>{{ element.price }}</td>
+                <td>{{ element.quantity }}</td>
+                <td>{{ element.get_cost }}</td>
+            {% if el.process %}
+                <td>Success</td>
+            {% else %}
+                <td>Denied</td>
+            {% endif %}
+
+
+
+
+
+            </tr>
+
+
+
+    {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}

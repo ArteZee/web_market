@@ -19,7 +19,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.HomepageListView.as_view(), name="homepage"),
 
-
+    path("",include("order.urls")),
     path("", include("products.urls")),
     path("", include("user.urls")),
     path("",include("cart.urls")),
