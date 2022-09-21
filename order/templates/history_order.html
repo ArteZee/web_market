@@ -17,6 +17,7 @@
             <td>Count</td>
             <td>Summarize</td>
             <td>Process</td>
+            <td>Refund</td>
 
         </tr>
         {% for element in object  %}
@@ -27,11 +28,18 @@
                 <td>{{ element.price }}</td>
                 <td>{{ element.quantity }}</td>
                 <td>{{ element.get_cost }}</td>
-            {% if el.process %}
-                <td>Success</td>
-            {% else %}
+                {% if not  element.process  %}
                 <td>Denied</td>
-            {% endif %}
+                    <td><a href="{% url "refund:refund-order" order_id=element.id %}">
+                        <button disabled>refund</button>
+                    </a></td>
+                {% else %}
+                <td>Success</td>
+                <td><a href="{% url "refund:refund-order" order_id=element.id %}">
+                    <button>refund</button>
+                </a></td>
+                {% endif %}
+
 
 
 

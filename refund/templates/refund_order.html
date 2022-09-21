@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Orders{% endblock %}
+{% block container %}
+    <h1>Your Refunds</h1>
 
-</body>
-</html>
+    <h3>{{ order_refund.created }} x {{ order_refund.user.username }}</h3>
+    <h3>{{ order_refund.order.product.name }} x {{ order_refund.order.product.slug }}</h3>
+
+    <li>
+        {{ order_refund.order.price }} x {{ order_refund.order.quantity }}
+        <span>${{ total_price }}</span>
+    </li>
+
+    {
+{% endblock %}

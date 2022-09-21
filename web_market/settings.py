@@ -29,7 +29,9 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'user.apps.UserConfig',
     'cart.apps.CartConfig',
-    'order.apps.OrderConfig'
+    'order.apps.OrderConfig',
+    'refund.apps.RefundConfig',
+
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
