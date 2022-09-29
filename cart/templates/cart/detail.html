@@ -44,6 +44,10 @@
     </table>
     <p class="text-right">
         <a href="{% url "homepage" %}" class="button light">Continue shopping</a>
-        <a href="{% url "order:order-create" username=user.username %}" class="button">Checkout</a>
+        {% if  cart.afford_buy %}
+        <a href="{% url "order:order-create" username=user.username %}"> <button>Checkout</button> </a>
+    {% else %}
+    <a href="{% url "order:order-create" username=user.username %}"> <button disabled>Checkout</button> </a>
     </p>
+    {% endif %}
 {% endblock %}

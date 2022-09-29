@@ -52,3 +52,12 @@ class Cart(object):
     def clear(self):
         del self.session[settings.CART_SESSION_ID]
         self.session.modified = True
+
+    def afford_buy(self,):
+        product_ids = self.cart.keys()
+        products = ProductModel.objects.get(slug__in=product_ids)
+        for item in self.cart.values():
+            if item["quantity"] <= products.count:
+                return True
+            else:
+                return False
