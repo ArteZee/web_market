@@ -9,4 +9,5 @@ urlpatterns = [
     path("auth/", obtain_auth_token,name= "api-token"),
     *routers.category_router.urls,
     *routers.product_router.urls,
+    *routers.user_router.urls,
 ]
