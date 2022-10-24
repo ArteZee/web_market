@@ -25,8 +25,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'products.apps.ProductsConfig',
-    'user.apps.UserConfig'
+    'user.apps.UserConfig',
+    'cart.apps.CartConfig',
+    'order.apps.OrderConfig',
+    'refund.apps.RefundConfig',
+
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,6 +79,8 @@ AUTH_PASSWORD_VALIDATORS = []
 AUTH_USER_MODEL = "user.UserModel"
 
 LOGIN_REDIRECT_URL = "/"
+
+CART_SESSION_ID = 'cart'
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 LANGUAGE_CODE = 'en-us'

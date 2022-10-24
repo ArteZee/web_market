@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock %}
+{% block container %}
+    <h1>Your Orders</h1>
+    {% include "styles_web/style_cart.html" %}
+
+
+    <table border="5">
+        <tbody>
+        <tr>
+            {#            exectly this will be 30 px#}
+            {#            <td width="30px">№</td>#}
+            <td>Create</td>
+            <td>username</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Count</td>
+            <td>Summarize</td>
+            <td>Accept</td>
+            <td>decline</td>
+
+        </tr>
+        {% for element in all_order %}
+            <tr>
+                <td>{{ element.created }}</td>
+                <td>{{ element.user }}</td>
+                <td>{{ element.order.product.name }}</td>
+                <td>{{ element.order.price }}</td>
+                <td>{{ element.order.quantity }}</td>
+                <td>{{ element.order.get_cost }}</td>
+                <td><a href="{% url "refund:accept-refund" order_id=element.id %}">
+                    <button>accept</button>
+                </a></td>
+                <td><a href="{% url "refund:decline-refund" order_id=element.id %}">
+                    <button>decline</button>
+                </a></td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
+

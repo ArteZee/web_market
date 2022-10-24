@@ -34,10 +34,10 @@
             </form>
         </a></li>
         <li>
-            <form action="/cart" target="_self">
+            <a href="{% url "cart:cart_detail" %}">
                 <button>Cart</button>
-            </form>
-        </li>
+
+            </a></li>
         {% if user.is_authenticated %}
             <li><a href="{% url "user:user" slug=user.username %}">
                 <button>{{ user.username }}</button>
@@ -53,6 +53,19 @@
                 <button>Register</button>
             </a></li>
         {% endif %}
+        {% if user.is_staff %}
+            <li>
+                <a href="{% url "product:product-create" %}">
+                    <button>Create item</button>
+
+                </a></li>
+            <li>
+                <a href="{% url "refund:all-orders" %}">
+                    <button>Refunds</button>
+
+                </a></li>
+        {% endif %}
+
     </ul>
 </nav>
 </body>

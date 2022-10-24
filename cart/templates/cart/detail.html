@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Your shopping cart
+{% endblock %}
+{% block container %}
+    <h1>Your shopping cart</h1>
+    <table class="cart">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+            <th>Unit price</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart %}
+            {% with product=item.product %}
+                <tr>
+                    <td>
+                        <a href="{{ products.get_absolute_url }}">
+                            <img src="{{ product.img }}" width="50" height="50" alt="picture">
+                        </a>
+                    </td>
+                    <td><a href="{% url "product:product" product.slug%}">{{ product.name }}</a></td>
+                    <td>{{ item.quantity }}</td>
+                    <td><a href="{% url "cart:cart_remove" product.slug%}">Remove</a></td>
+                    <td class="num">UAH {{ item.price }}</td>
+                    <td class="num">UAH {{ item.total_price }}</td>
+                </tr>
+            {% endwith %}
+        {% endfor %}
+        <tr class="total">
+            <td>Total</td>
+             <td colspan="0"></td>
+            <td class="num"> {{ cart.total_count }}</td>
+            <td colspan="2"></td>
+            <td class="num">UAH {{ cart.total_price }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="text-right">
+        <a href="{% url "homepage" %}" class="button light">Continue shopping</a>
+        {% if  cart.afford_buy %}
+        <a href="{% url "order:order-create" username=user.username %}"> <button>Checkout</button> </a>
+    {% else %}
+    <a href="{% url "order:order-create" username=user.username %}"> <button disabled>Checkout</button> </a>
+    </p>
+    {% endif %}
+{% endblock %}

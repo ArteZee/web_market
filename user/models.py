@@ -15,6 +15,7 @@ class UserModel(AbstractUser):
     )
     gender = models.CharField(max_length=1, choices=genders, default="")
     age = models.IntegerField(null=True, blank=True, )
+    balance = models.IntegerField(null=True, default=10_000)
 
     class Meta:
         db_table = "auth_user"

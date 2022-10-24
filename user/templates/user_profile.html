@@ -11,6 +11,7 @@
     <a href="{% url "user:change-data" slug=object.username %}">
         <button>Edit data</button>
     </a>
+    <a href="{% url "order:order-history" user_id=usermodel.id %}" class="button">history</a>
 
     <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" width="200" height="200"
          alt="picture">
@@ -26,6 +27,8 @@
             style="font-size: 30px; ">{{ user.age }}</span></div>
     <div><span style="font-size:35px;color: gray">Gender:</span> <span
             style="font-size: 30px; ">{{ user.gender }}</span></div>
+    <div><span style="font-size:35px;color: gray">Balance:</span> <span
+        style="font-size: 30px; ">{{ user.balance }}</span></div>
 
 
 {% endblock %}

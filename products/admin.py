@@ -1,6 +1,6 @@
 from django.contrib import admin
 from products.models import ProductModel, CategoryModel
-
+from user.models import UserModel
 
 # Register your models here.
 
@@ -15,3 +15,4 @@ class ProductModelAdmin(admin.ModelAdmin):
 
 admin.site.register(ProductModel, ProductModelAdmin)
 admin.site.register(CategoryModel)
+admin.site.register(UserModel)

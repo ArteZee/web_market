@@ -15,11 +15,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from web_market import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.HomepageListView.as_view(), name="homepage"),
-    path("cart", views.CartTemplateView.as_view(), name= "cart"),
+
+    path("", include("order.urls")),
     path("", include("products.urls")),
     path("", include("user.urls")),
+    path("", include("cart.urls")),
+    path("", include("refund.urls")),
 ]
 handler404 = "web_market.views.page_not_found_view"
