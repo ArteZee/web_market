@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 from products.models import ProductModel,CategoryModel
 from products.serializers import ProductSerializer,CategorySerializer
-from .permissions import IsOwnerOrReadOnly,IsSuperUserPermission,UserProfilePermissions
-from rest_framework import permissions
+from .permissions import IsOwnerOrReadOnly
+
 
 class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer

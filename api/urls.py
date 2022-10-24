@@ -7,6 +7,6 @@ app_name = "api"
 
 urlpatterns = [
     path("auth/", obtain_auth_token,name= "api-token"),
-    *routers.category_router,
-    *routers.product_router,
+    *routers.category_router.urls,
+    *routers.product_router.urls,
 ]
