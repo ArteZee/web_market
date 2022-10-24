@@ -3,18 +3,18 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 from django.views.generic import DetailView, ListView, CreateView
 from cart.forms import CartAddProductForm
+from .forms import ProductForm
 from .models import ProductModel
-from products.forms import ProductForm
 from .utils import ObjectCreateMixin,ObjecttUpdateMixin
 
 
 class ProductCreate(ObjectCreateMixin, View):
-    form_model = ProductForm
+    model = ProductModel
     template = "create_update_form.html"
 
 class ProductUpdate(ObjecttUpdateMixin,View):
     model = ProductModel
-    form_model = ProductForm
+
     template = "create_update_form.html"
 
 class ProductDetailView(DetailView):
