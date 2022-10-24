@@ -26,5 +26,6 @@ urlpatterns = [
     path("", include("cart.urls")),
     path("", include("cart.urls")),
     path("", include("refund.urls")),
+    path("",include("api.urls"))
 ]
 handler404 = "web_market.views.page_not_found_view"
