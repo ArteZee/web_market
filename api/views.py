@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from products.models import ProductModel,CategoryModel
 from products.serializers import ProductSerializer,CategorySerializer
-from .permissions import IsOwnerOrReadOnly,OnlyOwner
+from .permissions import IsOwnerOrReadOnly,UserOwnerPermissions
 from user.models import UserModel
 from user.serializers import UserSerializer
 
@@ -21,6 +21,6 @@ class CategoryViewSet(ModelViewSet):
 class UserViewSet(ModelViewSet):
     serializer_class = UserSerializer
     queryset = UserModel.objects.all()
-    permission_classes = [OnlyOwner]
+    permission_classes = [UserOwnerPermissions]
 
 
