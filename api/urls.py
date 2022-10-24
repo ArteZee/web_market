@@ -1,6 +1,5 @@
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
-from api import auth
 from api import routers
 
 app_name = "api"
@@ -10,4 +9,5 @@ urlpatterns = [
     *routers.category_router.urls,
     *routers.product_router.urls,
     *routers.user_router.urls,
+    *routers.order_router.urls,
 ]
